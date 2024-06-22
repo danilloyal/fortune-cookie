@@ -1,0 +1,88 @@
+:root {
+  font-size: 62.5%;
+}
+body {
+    background: linear-gradient(45deg, #030561, #6ce0e4);
+		animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+  }
+.hide {
+  display: none;
+}
+main{
+  background-color: white;
+  padding: 4.8rem 6.4rem 6.4rem;
+  max-width: 42.8rem;
+  text-align: center;
+  box-shadow: 0px 20px 70px rgba(0, 0, 0, 0.8);
+  border-radius: .5rem;
+  gap:1.7rem;
+}
+h1{
+  color: #34355B;
+  font-size: 2.4rem;
+  font-family: "Montserrat", sans-serif;
+}
+p{
+  font-size: 1.5rem;
+  font-family: "DM Sans", sans-serif;
+}
+button{
+  background-color: #FF9500;
+  color:#FFFFFF;
+  border-radius: .4rem;
+  border:none;
+  padding: 1.6rem;
+  cursor: pointer;
+}
+svg{
+  max-width: 100%;
+  height: auto;
+}
+#closed:hover{
+  cursor: pointer;
+}
+#closed.shake {
+  animation: shake 120ms 150ms infinite ;
+}
+p.message{
+  background-color: #E4EDF1;
+  padding: 1rem;
+  font-size: 2.4rem;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  animation:scale-up-bottom 1s cubic-bezier(.39,2,.565,1.000) both
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: translateY(.1rem) rotate(1deg);
+  }
+  100% {
+    transform: translateY(-.1rem) rotate(-1deg);
+    
+  }
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+@keyframes scale-up-bottom{
+  0% {
+    transform:scale(.1);transform-origin:50% 100%
+  }
+  100% {transform:scale(1);transform-origin:50% 100%
+  }
+  }
